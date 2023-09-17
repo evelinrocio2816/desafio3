@@ -13,10 +13,10 @@ export default styles = StyleSheet.create({
   Input: {
     color: 'white',
     backgroundColor: colors.colors3,
-    borderRadius: 8,
+    borderRadius: 20,
     padding: 10,
     borderWidth: 1,
-    borderColor: colors.colors3,
+    
     width: '80%',
     fontSize: 20,
   },

@@ -5,8 +5,9 @@ import styles from './Card.style'
 
 const Card = ({children, style}) => {
   return (
-    <View style={[styles.container, style]} >
+    <View style={[styles.cardContainer, style]} >
       {children}
+      
     </View>
   )
 }

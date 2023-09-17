@@ -1,14 +1,9 @@
-
-import { useState } from "react";
-import { Home, Products } from "./src/screens";
-import {StyleSheet} from "react-native";
 import Fonts from "./src/global/Fonts";
-
-
 import { useFonts } from 'expo-font';
+import Navigator from "./src/Navigation/Navigator";
+
 
 export default function App(){
-const [categorySelected, setCategorySelected]=useState(null)
 const [fontsLoaded] = useFonts(Fonts);
 
 
@@ -16,13 +11,10 @@ if (!fontsLoaded) {
   return null
 }
 
-  return( 
+  return <Navigator/>
   
-    categorySelected ? <Products category={categorySelected} setCategorySelected={setCategorySelected}/>:  <Home setCategorySelected={setCategorySelected}/>
-    
 
-  )
+  
 }
 
 
-const styles = StyleSheet.create({})

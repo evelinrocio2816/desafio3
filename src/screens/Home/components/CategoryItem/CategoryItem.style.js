@@ -6,11 +6,15 @@ export default styles = StyleSheet.create({
         marginVertical:10,
         padding:10,
         justifyContent:'center',
-        alignItems:'center',
+        alignItems:'baseline',
+        width:'80%',
+        borderRadius:30,
+        height:70,
 
     },
     text:{
         fontSize:20,
-        color:'#FFFFFF'
+        color:'#000000',
+       
     }
 })

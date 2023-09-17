@@ -1,18 +1,17 @@
-import { StyleSheet } from "react-native"
-import { colors } from '../../constants/colors'
+import { StyleSheet } from "react-native";
+import { colors } from "../../constants/colors";
 
 export default styles = StyleSheet.create({
-    container:{
+  cardContainer: {
+    backgroundColor: colors.colors3,
+   shadowColor:'#000000',
+   marginHorizontal:30,
+   marginVertical:10,
+   padding:10,
+  
+   
+   
 
-        backgroundColor:colors.colors2,
-    shadowColor: "#000",
-shadowOffset: {
-	width: 3,
-	height: 2,
 },
-shadowOpacity: 1.30,
-shadowRadius: 3.84,
 
-elevation: 10,
-    }
-})
+});

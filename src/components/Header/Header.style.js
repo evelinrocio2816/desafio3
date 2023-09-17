@@ -8,10 +8,12 @@ export default styles = StyleSheet.create({
     height: 80,
     width: "100%",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: 'space-evenly',
+    flexDirection:'row'
   },
   text: {
     fontSize: 30,
     fontFamily: 'Oswald-Bold',
+    color:'#ffffff'
   },
 });

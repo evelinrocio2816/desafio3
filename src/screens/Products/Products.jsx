@@ -1,13 +1,14 @@
-import { Button, FlatList, Text, TouchableOpacity, View } from "react-native";
+import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { Header, SearchInput } from "../../components";
 import React, { useEffect, useState } from "react";
 
 import allProducts from "../../data/Products";
 import styles from "./Products.style";
 
-const Products = ({ category, setProductSelected, setCategorySelected }) => {
+const Products = ({navigation, route }) => {
   const [arrProducts, setArrProducts] = useState([]);
   const [keyword, setKeyword] = useState("");
+const {category} = route.params
 
   useEffect(() => {
     if (category) {
@@ -28,7 +29,7 @@ const Products = ({ category, setProductSelected, setCategorySelected }) => {
 
   return (
     <View style={styles.container}>
-      <Header title={category} />
+      <Header title={'category'} navigation={navigation}/>
       <View style={styles.SearchContainer}>
         <SearchInput onSearch={setKeyword} />
       </View>
@@ -36,15 +37,12 @@ const Products = ({ category, setProductSelected, setCategorySelected }) => {
         <FlatList
           data={arrProducts}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => setProductSelected(item)}>
+            <TouchableOpacity onPress={() =>navigation.navigate("Details", {Products: item})}>
               <Text style={styles.textItem}>{item.title}</Text>
             </TouchableOpacity>
           )}
           keyExtractor={(item) => item.id}
         />
-        <View style ={styles.containerButton}>
-          <Button title="Volver" onPress={() => setCategorySelected(null)} />
-        </View>
       </View>
     </View>
   );
