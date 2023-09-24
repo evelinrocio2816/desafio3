@@ -16,7 +16,6 @@ export default styles = StyleSheet.create({
     borderRadius: 20,
     padding: 10,
     borderWidth: 1,
-    
     width: '80%',
     fontSize: 20,
   },
